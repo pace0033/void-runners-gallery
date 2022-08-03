@@ -38,6 +38,24 @@ module.exports = {
         .setColor("#FFFFFF")
         .setTitle(ship.name)
         .setURL(ship.external_url)
+        .addFields(
+          { name: "Class", value: ship.stats.ship_class },
+          {
+            name: "Capacity",
+            value: ship.stats.capacity.toString(),
+            inline: true,
+          },
+          {
+            name: "Efficiency",
+            value: ship.stats.efficiency.toString(),
+            inline: true,
+          },
+          {
+            name: "Speed",
+            value: ship.stats.speed.toString(),
+            inline: true,
+          }
+        )
         .setImage(ship.image);
 
       await interaction.editReply({ embeds: [embed] });
