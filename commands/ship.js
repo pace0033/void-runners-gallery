@@ -51,8 +51,8 @@ module.exports = {
         .setURL(ship.external_url)
         .addFields(
           { name: "Class", value: ship.stats.ship_class, inline: true },
-          { name: "Hull", value: hull, inline: true },
           { name: "Colorway", value: ship.stats.colorway, inline: true },
+          { name: "Hull", value: hull, inline: true },
           {
             name: "Capacity",
             value: `${ship.stats.capacity} (${ship.stats.rank_capacity} rank)`,
